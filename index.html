@@ -11,53 +11,72 @@
 
         <title>thurstn's fungeon</title>
         <link href="./site.css" rel="stylesheet" type="text/css" media="all">
-        <script src="./jquery-3.7.0.min.js"></script>
-        
     </head>
   
     <body>
+        <div id="top">
+            <span id="logo">Thurstn</span>
+            <span id="subtext">I make some pretty cool things</span>
+        </div>
+
         <div id="wrapper">
-            <header>
-                <span id="logo">Thurstn_</span>
+            <header class="main-header">
+                <nav id="navbar">
+                    <span id="minilogo" class="showonscroll">Thurstn</span>
+                    <a href="#home" id="nav-home">Home</a>
+                    <a href="#art" id="nav-art">Art</a>
+                    <a href="#web" id="nav-web">Web</a>
+                    <a href="#projects" id="nav-projects">Projects</a>
+                    <a href="#about" id="nav-about">About</a>
+                    <a href="#contact" id="nav-contact">Contact</a>
+                    <a href="#top" id="nav-top" class="showonscroll">Top</a>
+                </nav>
             </header>
+            
+            <div id="content-wrapper">
+                <!--HOME-->
+                <section id="home">
+                    <header class="section-header">Home</header>
+                </section>
 
-            <div class="accordion-horizontal">
-                <div class="acc-section active" id="home">
-                    <div class="acc-section-header">
-                        Home
-                    </div><div class="acc-section-content">
-                        This is the home page.
-                    </div>
-                </div>
+                <!--ART-->
+                <section id="art">
+                    <header class="section-header">Art</header>
+                </section>
 
-                <div class="acc-section" id="gallery">
-                    <div class="acc-section-header">
-                        Gallery
-                    </div>
-                    <div class="acc-section-content">
-                        This is the gallery.
-                    </div>
-                </div>
+                <!--WEB-->
+                <section id="web">
+                    <header class="section-header">Web</header>
+                </section>
 
-                <div class="acc-section" id="about">
-                    <div class="acc-section-header">
-                        About
-                    </div>
-                    <div class="acc-section-content">
-                        This is about.
-                    </div>
-                </div>
+                <!--PROJECTS-->
+                <section id="projects">
+                    <header class="section-header">Projects</header>
+                    <article id="project-untitledgame">
+                        <h1>Untitled Video Game</h1>
+                        <p>A video game I am making.</p>
+                    </article>
 
-                <div class="acc-section" id="links">
-                    <div class="acc-section-header">
-                        Links
-                    </div>
-                    <div class="acc-section-content">
-                        This is the links.
-                    </div>
-                </div>
+                    <article id="project-font">
+                        <h1>ThurstnHand Font</h1>
+                        <p>ThurstnHand is a custom opentype font I made, or <i>am making</i>, based on the handwriting of yours truly - 
+                            in fact you've been reading it this whole time! (unless you have some kind of cool-font-blocking code in your browser, in which case you have single-handedly ruined my life.) 
+                            As you might be able to tell, dear reader, it's not quite finished yet but </p>
+                        </article>
+                </section>
+
+                <!--ABOUT-->
+                <section id="about">
+                    <header class="section-header">About</header>
+                </section>
+
+                <!--CONTACT-->
+                <section id="contact">
+                    <header class="section-header">Contact</header>
+                    <p>don't</p>
+                </section>
             </div>
-
+            
         </div>
     </body>
     <script src="./site.js"></script>

@@ -1,68 +1,136 @@
+@font-face{
+    font-family: ThurstnHand;
+    src: url("./assets/fonts/ThurstnHand.otf");
+}
+
+:root{
+    --accent: #800020;
+    --acchighlight: peru;
+    --bg: #ffffff;
+    --txt: #1d121c;
+}
+
 *{
     margin: 0;
     padding: 0;
-    text-decoration: none;
     list-style-type: none;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: ThurstnHand; /*'Ubuntu', sans-serif;*/
+    font-size: 30px;
+}
+
+a, a:visited{
+    text-decoration: none;
+}
+
+#top{
+    width: 100vw;
+    height: 50vh;
+    top: 0;
+    background-color: brown;
+    text-align: center;
+}
+#logo{
+    font-size: 70px;
+    font-weight: 900;
+    margin-top: 150px;
+    display:inline-block;
+    color: var(--bg);
+}
+#subtext{
+    font-size: 30px;
+    display: block;
+    color: var(--bg);
 }
 
 #wrapper{
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 100vh;
     overflow: hidden;
-}
-header{
-    display: block;
-    background-color: #ffffff;
-    height: fit-content;
-    width: 100%;
-    font-size: 40px;
-    padding: 10px;
-    -webkit-box-shadow: 0px 0px 5px 0px #000000; 
-    box-shadow: 0px 0px 5px 0px #000000;
+    background-color: var(--bg);
+    background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
+    background-size: 150px;
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
-.accordion-horizontal
-{
-    flex-grow: 1;
-    display: flex;
-    flex-direction: row;
+.main-header{
+    display: block;
+    background-color: var(--bg);
+    color: var(--txt);
+    height: fit-content;
     width: 100%;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-.acc-section{
-    float: left;
-    overflow: hidden;
-}
-.acc-section-header{
-    writing-mode: vertical-lr;
-    font-size: 30px;
-    background-color: #800020;
-    color: #ffffff;
-    padding: 10px 5px;
-    height: 100%;
-    width: 30px;
     -webkit-box-shadow: 0px 0px 5px 0px #000000; 
     box-shadow: 0px 0px 5px 0px #000000;
+    overflow: hidden;
+}
+
+
+nav{
+    background-color: var(--accent);
+    font-size: 0; /*removes empty space between centered nav items*/
+    text-align: center;
+    font-weight: bold;
+}
+nav #minilogo{
     float: left;
-    cursor: pointer;
+    font-size: 35px;
+    color: var(--bg);
+    padding: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
 }
-.acc-section-header:hover{
-    background-color: brown;
+nav a{
+    background-color: var(--accent);
+    color: var(--bg);
+    padding: 5px 20px;
+    display: inline-block;
+    font-size: 35px;
+    box-shadow: inset 0 0 0 0 var(--acchighlight);
+    transition: box-shadow .2s ease-in-out;
 }
-.acc-section-content{
-    display: none;
-    height: 100%;
-    float: left;
-    margin: 0;
-    padding: 0;
+nav a:hover{
+    /*background-color: var(--acchighlight) brown;*/
+    box-shadow: inset 0 50px 0 0 var(--acchighlight);
 }
-.acc-section.active > .acc-section-content{
-    display: block;
-    flex-grow: 3;
-    min-height: 100%;
+nav #nav-top{
+    float: right;
+    padding: 5px;
+    margin-right: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#content-wrapper{
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.section-header{
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+section article{
+    width: 98%;
+    margin: 10px auto;
+}
+
+#projects h1{
+    background-color: var(--accent);
+    color: var(--bg);
+    padding: 0 10px;
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    width: fit-content;
+    -webkit-box-shadow: 0px 0px 3px 0px #000000; 
+    box-shadow: 0px 0px 3px 0px #000000;
 }
