@@ -14,8 +14,8 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
-    font-family: ThurstnHand; /*'Ubuntu', sans-serif;*/
-    font-size: 30px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 25px;
 }
 
 a, a:visited{
@@ -30,14 +30,14 @@ a, a:visited{
     text-align: center;
 }
 #logo{
-    font-size: 70px;
+    font-size: 60px;
     font-weight: 900;
     margin-top: 150px;
     display:inline-block;
     color: var(--bg);
 }
 #subtext{
-    font-size: 30px;
+    font-size: 25px;
     display: block;
     color: var(--bg);
 }
@@ -50,7 +50,6 @@ a, a:visited{
     background-color: var(--bg);
     background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
     background-size: 150px;
-    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 .main-header{
@@ -69,11 +68,11 @@ a, a:visited{
     background-color: var(--accent);
     font-size: 0; /*removes empty space between centered nav items*/
     text-align: center;
-    font-weight: bold;
+    width: 100%;
 }
 #navbar #minilogo{
     float: left;
-    font-size: 35px;
+    font-size: 30px;
     color: var(--bg);
     padding: 5px;
     visibility: hidden;
@@ -86,18 +85,16 @@ a, a:visited{
     color: var(--bg);
     padding: 5px 20px;
     display: inline-block;
-    font-size: 35px;
+    font-size: 30px;
     box-shadow: inset 0 0 0 0 var(--acchighlight);
     transition: box-shadow .2s ease-in-out;
 }
 #navbar a:hover{
-    /*background-color: var(--acchighlight) brown;*/
     box-shadow: inset 0 50px 0 0 var(--acchighlight);
 }
 #navbar #nav-top{
     float: right;
-    padding: 5px;
-    margin-right: 10px;
+    padding: 5px 10px;
     visibility: hidden;
     opacity: 0;
     transition: opacity .3s ease-in-out;
@@ -110,15 +107,56 @@ a, a:visited{
     width: 100%;
 }
 
-#content-wrapper{
-    width: 80vw;
-    margin: 0 auto;
-}
 
+section{
+    width: 100%;
+    margin: 5px 0;
+    padding: 5px;
+    /*-webkit-box-shadow: 0px 0px 5px 0px #000000; 
+    box-shadow: 0px 0px 5px 0px #000000;*/
+}
 .section-header{
     font-size: 40px;
     font-weight: bold;
     color: var(--accent);
+}
+
+#home{
+    width: 80%;
+    margin: 0 auto;
+}
+.accordion{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+.accordion-segment{
+    float: left;
+    flex: 1;
+    transition: all .5s ease-in-out;
+    margin: 1px;
+    border: 2px solid var(--bg);
+    cursor: pointer;
+}
+.accordion-segment:hover{
+    flex: 10;
+}
+#accordion-1{
+    background-image: url("https://picsum.photos/1280/720");
+}
+#accordion-2{
+    background-image: url("https://picsum.photos/1280/720");
+}
+#accordion-3{
+    background-image: url("https://picsum.photos/1280/720");
+}
+#accordion-4{
+    background-image: url("https://picsum.photos/1280/720");
+}
+#accordion-5{
+    background-image: url("https://picsum.photos/1280/720");
 }
 
 section article{
@@ -136,16 +174,53 @@ section article{
     -webkit-box-shadow: 0px 0px 3px 0px #000000; 
     box-shadow: 0px 0px 3px 0px #000000;
 }
+#project-font div{
+    display: flex;
+}
+#project-font img{
+    height: 250px;
+    background-size: cover;
+    border: 5px solid var(--bg);
+    margin-left: 10px;
+}
 
+#projects #mini-gallery{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#projects #mini-gallery img{
+    height: 300px;
+    background-size: cover;
+    margin: 5px 10px;
+    border: 5px solid var(--bg);
+}
 #game-link{
-    color: var(--txt);
-    padding: 0 5px;
-    box-shadow: inset 0 -10px 0 0 teal;
+    color: var(--bg);
+    padding: 0 40px;
+    background-color: teal;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 35px;
+}
+#game-link:hover{
+    background-color: var(--acchighlight);
 }
 
 p .smaller{
     font-size: 15px;
     line-height: 20px;
+}
+
+
+#about{
+    background-color: var(--accent);
+    color: var(--bg);
+}
+#about header{
+    color: var(--bg);
 }
 
 
