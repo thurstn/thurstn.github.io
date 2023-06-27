@@ -1,6 +1,6 @@
 @font-face{
     font-family: ThurstnHand;
-    src: url("./assets/fonts/ThurstnHand.otf");
+    src: url("../assets/fonts/ThurstnHand.otf");
 }
 
 :root{
@@ -65,13 +65,13 @@ a, a:visited{
 }
 
 
-nav{
+#navbar{
     background-color: var(--accent);
     font-size: 0; /*removes empty space between centered nav items*/
     text-align: center;
     font-weight: bold;
 }
-nav #minilogo{
+#navbar #minilogo{
     float: left;
     font-size: 35px;
     color: var(--bg);
@@ -79,8 +79,9 @@ nav #minilogo{
     visibility: hidden;
     opacity: 0;
     transition: opacity .3s ease-in-out;
+    border-right: 1px solid var(--acchighlight);
 }
-nav a{
+#navbar a{
     background-color: var(--accent);
     color: var(--bg);
     padding: 5px 20px;
@@ -89,17 +90,18 @@ nav a{
     box-shadow: inset 0 0 0 0 var(--acchighlight);
     transition: box-shadow .2s ease-in-out;
 }
-nav a:hover{
+#navbar a:hover{
     /*background-color: var(--acchighlight) brown;*/
     box-shadow: inset 0 50px 0 0 var(--acchighlight);
 }
-nav #nav-top{
+#navbar #nav-top{
     float: right;
     padding: 5px;
     margin-right: 10px;
     visibility: hidden;
     opacity: 0;
     transition: opacity .3s ease-in-out;
+    border-left: 1px solid var(--acchighlight);
 }
 
 .sticky{
@@ -133,4 +135,36 @@ section article{
     width: fit-content;
     -webkit-box-shadow: 0px 0px 3px 0px #000000; 
     box-shadow: 0px 0px 3px 0px #000000;
+}
+
+#game-link{
+    color: var(--txt);
+    padding: 0 5px;
+    box-shadow: inset 0 -10px 0 0 teal;
+}
+
+p .smaller{
+    font-size: 15px;
+    line-height: 20px;
+}
+
+
+
+/* MOBILE LAYOUT */
+@media screen and (max-width: 600px)
+{
+    #navbar a{
+        font-size: 30px;
+        padding: 0 5px;
+    }
+    #navbar #minilogo{
+        display: none;
+    }
+    #navbar #nav-top{
+        display: none;
+    }
+    
+    *{
+        font-size: 25px;
+    }
 }
