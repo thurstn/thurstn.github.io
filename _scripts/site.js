@@ -1,6 +1,4 @@
-var sticky = document.getElementById("navbar").offsetTop;
-
-window.onscroll = function(){
+/*window.onscroll = function(){
     let els = document.getElementsByClassName("showonscroll");
     let logo = document.getElementById("logo");
     if (isInViewport(logo))
@@ -29,7 +27,7 @@ window.onscroll = function(){
     {
         document.getElementById("navbar").classList.remove("sticky");
     }
-}
+}*/
 
 function isInViewport(element)
 {

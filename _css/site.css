@@ -1,0 +1,271 @@
+@font-face{
+    font-family: ThurstnHand;
+    src: url("/_assets/fonts/ThurstnHand.otf");
+}
+
+:root{
+    --accent: #800020;
+    --acchighlight: peru;
+    --txt: #ffffff;
+    --bg: #1d121c;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+}
+html{
+    scroll-snap-type: y mandatory;
+}
+body{
+    width: 100%;
+    background-color: #fffcfc;
+    background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
+    overflow-y: scroll;
+}
+
+a, a:visited{
+    text-decoration: none;
+}
+
+.tooltip{
+    position: relative;
+}
+.tooltip .tooltip-text{
+    visibility: hidden;
+    background-color: var(--bg);
+    color: var(--txt);
+    font-family: ThurstnHand;
+    text-align: center;
+    font-size: 25px;
+    padding: 2px 5px;
+    line-height: 20px;
+
+    position: absolute;
+    z-index: 1;
+    top: -20px;
+    left: 0;
+    box-shadow: 0px 0px 5px 0px var(--bg);
+}
+.tooltip:hover .tooltip-text{
+    visibility: visible;
+}
+
+header{
+    height: 100vh;
+    width: 250px;
+    top: 0;
+    left: 0;
+    background-color: var(--accent);
+    color: var(--txt);
+    text-align: center;
+    box-shadow: 3px 0px 5px 0px var(--bg);
+    position: fixed;
+}
+#icon{
+    object-fit: cover;
+    padding: 15px;
+    width: 200px;
+    border-bottom: 1px solid var(--txt);
+}
+#logo{
+    font-size: 35px;
+    display:none;
+    border-bottom: 2px solid var(--txt);
+    width: 90%;
+}
+#subtext{
+    font-family: Arial, Helvetica, sans-serif;
+    color: linen;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#navbar{
+    background-color: var(--accent);
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+#navbar a{
+    background-color: var(--accent);
+    color: var(--txt);
+    padding: 5px 0;
+    font-size: 25px;
+    width: 100%;
+    display: inline-block;
+    /*box-shadow: inset 0 0 0 0 var(--acchighlight);
+    transition: box-shadow .2s ease-in-out;*/
+    border-bottom: 2px solid var(--accent);
+    transition: color .2s ease-in-out;
+}
+#navbar a:hover{
+    /*box-shadow: inset 0 50px 0 0 var(--acchighlight);*/
+    color: var(--acchighlight);
+}
+#navbar a.active{
+    color: var(--acchighlight);
+}
+
+#header-socials{
+    width: 80%;
+    margin: 0 auto;
+    position: absolute;
+    left: 10%;
+    bottom: 30px;
+    display: inline-block;
+    line-height: 50px;
+}
+#header-socials .fa{
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+    display: inline-block;
+    color: var(--txt);
+    text-decoration: none;
+    line-height: 50px;
+    font-size: 35px;
+    
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px var(--bg);
+    transition: all .2s ease-in;
+}
+#header-socials .fa:hover{
+    background-color: var(--txt);
+    color: var(--acchighlight);
+}
+.fa.fa-twitter{
+    background-color: #1da1f2;
+}
+.fa.fa-github{
+    background-color: #181717;
+}
+.fa.fa-newgrounds{
+    background-color: #fda238;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content-wrapper{
+    margin: 0 0 0 250px; /* size of navbar */
+    width: calc(100% - 250px); /*viewport width - navbar width*/
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    
+    scroll-snap-align: start;
+}
+.content-wrapper h1{
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--accent);
+    margin-left: 30px;
+}
+.content-wrapper p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+#home-1 p{
+    margin-left: 30px;
+}
+#home-1 p .smaller{
+    font-size: 15px;
+}
+
+.accordion{
+    width: 95%;
+    height: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    
+}
+.accordion-segment{
+    display: flex;
+    float: left;
+    flex: 1;
+    transition: all .5s ease-in-out;
+    margin: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 var(--bg);
+}
+.accordion-segment:hover{
+    flex: 10;
+}
+.accordion-segment .acc-banner{
+    height: 100%;
+    width: fit-content;
+    background-color: var(--accent);
+    color: var(--txt);
+    font-size: 30px;
+    writing-mode: vertical-lr;
+    text-align: center;
+}
+.accordion-segment .acc-textbox{
+    width: 20%;
+    height: 100%;
+    padding: 5px;
+    background-color: var(--bg);
+    color: var(--txt);
+    align-self:flex-end;
+}
+#accordion-1{
+    background-image: url("https://picsum.photos/1280/720");
+}
+#accordion-2{
+    background-image: url("https://picsum.photos/1280/720");
+}
+#accordion-3{
+    background-image: url("https://picsum.photos/1280/720");
+}
+#accordion-4{
+    background-image: url("https://picsum.photos/1280/720");
+}
+#accordion-5{
+    background-image: url("https://picsum.photos/1280/720");
+}
+
+.content-wrapper#home-2{
+    background-color: teal;
+}
+
+
+
+/* MOBILE LAYOUT */
+@media screen and (max-width: 800px)
+{
+    header{
+        width: 100%;
+        height: fit-content;
+        position: static;
+        scroll-snap-align: start;
+    }
+    #logo{
+        border: none;
+    }
+    #navbar{
+        font-size: 0;
+    }
+    #navbar a{
+        width: auto;
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+    #header-socials{
+        display: none;
+    }
+
+    .content-wrapper{
+        width: 100%;
+        margin: 0;
+    }
+    
+    *{
+        font-size: 20px;
+    }
+}
