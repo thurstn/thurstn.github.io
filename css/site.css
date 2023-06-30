@@ -180,6 +180,10 @@ header{
     font-size: 25px;
 }
 
+#home-1 #hello{
+    width: 300px;
+    padding-top: 10px;
+}
 #home-1 p{
 }
 #home-1 p .smaller{
