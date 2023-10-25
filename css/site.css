@@ -23,7 +23,7 @@ html{
 body{
     width: 100%;
     background-color: #fffcfc;
-    background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
+    /*background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");*/
     overflow-y: scroll;
 }
 
@@ -54,23 +54,37 @@ a, a:visited{
 }
 
 /* HEADER */
-header{
+header#rightNav{
     height: 100vh;
-    width: 250px;
+    width: 200px;
+    top: 0;
+    right: 0;
+    background-color: var(--accent);
+    color: var(--txt);
+    text-align: center;
+    position: fixed;
+}
+header#rightNav::after{
+    z-index: -1;
+}
+
+header#leftNav{
+    height: 100vh;
+    width: 200px;
     top: 0;
     left: 0;
     background-color: var(--accent);
     color: var(--txt);
     text-align: center;
-    box-shadow: 3px 0px 5px 0px var(--bg);
+    box-shadow: 3px 0px 5px 0px rgba(0,0,0, 0.5);
     position: fixed;
 }
 #icon{
     object-fit: cover;
     padding: 15px;
-    width: 200px;
-    height: 95.733px;
-    border-bottom: 1px solid var(--txt);
+    width: 170px;
+    /*height: 95.733px;*/
+    
 }
 #logo{
     font-size: 35px;
@@ -81,9 +95,10 @@ header{
 
 #navbar{
     background-color: var(--accent);
-    text-align: center;
-    width: 70%;
+    text-align: right;
+    width: 90%;
     margin: 0 auto;
+    border-top: 1px solid var(--txt);
 }
 #navbar a{
     background-color: var(--accent);
@@ -130,8 +145,8 @@ header{
 
 /* MAIN BODY */
 .content-wrapper{
-    margin: 0 0 0 250px; /* size of navbar */
-    width: calc(100% - 250px); /*viewport width - navbar width*/
+    margin: 0 0 0 200px; /* size of navbar */
+    width: calc(100% - 400px); /*viewport width - navbar width*/
     height: 100vh;
     max-height: 100vh;
     overflow: hidden;
@@ -139,11 +154,11 @@ header{
     scroll-snap-align: start;
 }
 .content-wrapper .content{
-    width: 95%;
+    width: 100%;
     height: 100%;
     margin: 0 auto;
     background-color: aliceblue;
-    box-shadow: 0 0 5px 0 var(--bg);
+    box-shadow: 3px 0px 5px 0px rgba(0,0,0, 0.5);
 }
 .content-wrapper h1{
     font-size: 50px;
@@ -165,10 +180,6 @@ header{
     font-size: 25px;
 }
 
-#home-1 #hello{
-    width: 300px;
-    padding-top: 10px;
-}
 #home-1 p{
 }
 #home-1 p .smaller{
@@ -212,7 +223,7 @@ header{
     background-color: var(--bg);
     position: absolute;
     float: right;
-    right: 0;
+    left: 0;
     top: 0;
     bottom: 0;
     opacity: 0;
@@ -260,6 +271,14 @@ header{
 .content-wrapper#home-3 .content{
     box-shadow: none;
     background-color: transparent;
+}
+#contact-links-table{
+    width: 80%;
+    margin: 0 auto;
+}
+#contact-links-table a{
+    display: inline-block;
+    width: 20%;
 }
 
 
