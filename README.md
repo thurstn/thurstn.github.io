@@ -1,2 +1,2 @@
 # thurstn.github.io
-a github pages personal portfolio site
+a github pages kinda site
