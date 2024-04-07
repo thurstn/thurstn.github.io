@@ -1,0 +1,21 @@
+.carousel-container{
+    height: fit-content;
+    /*min-height: 80%;*/
+    margin: 10% 0;
+}
+
+.carousel-container h1{
+    color: white;
+    text-align: center;
+}
+
+.carousel-item{
+    width: 50%;
+    min-height: 80%;
+    margin: 0 auto;
+    float: none;
+
+    color: aliceblue;
+    background-color: black;
+    text-align: left;
+}
